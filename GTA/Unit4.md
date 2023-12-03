@@ -150,7 +150,7 @@ TBD
     - Expected degree of a node is c=(n-1)p
         - A node can have a maximum degree of n-1
         - Probability of selecting an edge is p
-    - Expected number of edges in G(n, p)is n<sup>C<sup>2</sup></sup>p
+    - Expected number of edges in G(n, p)is n<sub>C<sub>2</sub></sub>p
 
 
 

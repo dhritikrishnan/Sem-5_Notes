@@ -15,10 +15,10 @@
     - k-plex/k-core no of members a member is connected with
 - N-Clique/ K-clique
     - few members dont know each other
-    - path of {u,v} $\lt$ k
+    - path of {u,v} $\lte$ k
     - n=2 means max path between 2 nodes is 2
 - K Clan
-    - Diameter of graph is $\lt$ k
+    - Diameter of graph is $\lte$ k
     - All paths must be through members of the group
 - K plex
     - k-plex of size n means each vertex is connected to **at least** n-k other vertices
@@ -109,8 +109,8 @@ TBD
     - Examples of power law
         - Many individuals with few friends, few individuals with thousands of friends
         - Many sites get visited few times a day, few sites get visited millions of times a day
-
-    ![Normal Distribution] (Normal_Distribution.png "Normal Distribution")
+        
+        ![Normal_Distribution](Normal_Distribution.PNG "Normal Distribution")
 
     - In normal distribution, probability decreases as you move further away from the mean. This is not good for modelling degree distribution
 
@@ -129,9 +129,28 @@ TBD
     - If you rescale the variable k (k becomes ck where c is some constant) then the network remains unchanged other than that multiplicative factor c
     -Scale free networks have **large hubs**
     - Heavy Tails/ Fat tails: In normal distributions, tails are thin, in scale free networks the tails are heavy meaning that outliers are allowed and in fact expected in these networks
+    - Characteristics of Scale-free networks
+        1. Degree distribution follows power law
+        2. Clustering coefficient decreases as node defree increases (also power law)
+        3. Exhibit small world phenomena
+        4. Brittle - Can reduce connectivity by removing few nodes
+- Pareto Law - 80/20 rule: 20% of causes decide 80% of effects
+    - In terms of **CDF** (cumulative distribution frequency)
+- Zipf's law - Frequenct of any word is inversely proportional to its rank
 
 
+## Lesson 6: Random Graph Models
 
+- Assumption: Edges (friendships) between nodes (people) are formed **randomly**
+- There are two models (n p) and (n m)
+- (n p) model
+    - Any of the (n 2) edges are formed randomly
+    - Denoted as G(n, p)
+    - **Number of edges are not fixed**
+    - Expected degree of a node is c=(n-1)p
+        - A node can have a maximum degree of n-1
+        - Probability of selecting an edge is p
+    - Expected number of edges in G(n, p)is n<sup>C<sup>2</sup></sup>p
 
 
 

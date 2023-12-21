@@ -15,10 +15,10 @@
     - k-plex/k-core no of members a member is connected with
 - N-Clique/ K-clique
     - few members dont know each other
-    - path of {u,v} $\lte$ k
+    - path of {u,v} $\lt$= k
     - n=2 means max path between 2 nodes is 2
 - K Clan
-    - Diameter of graph is $\lte$ k
+    - Diameter of graph is $\lt$= k
     - All paths must be through members of the group
 - K plex
     - k-plex of size n means each vertex is connected to **at least** n-k other vertices
@@ -151,9 +151,74 @@ TBD
         - A node can have a maximum degree of n-1
         - Probability of selecting an edge is p
     - Expected number of edges in G(n, p)is n<sub>C<sub>2</sub></sub>p
+    - Estimate the probability of a given node having degree d
+
+    ![Degree](degree.PNG "Degree")
+
+    - As n -> infinity, it becomes a Poisson distribution 
+        - lambda = pn 
+        ![Poisson](Poisson.PNG "Poisson Distribution")
+        - **NOTE**: Poisson law decays _exponentially_ while power law decays _polynomially_
+- G(n m) model
+    - Here m edges are fixed
+    - Which m edges of the (n 2) edges should be picked?
+    ![Omega](omaga.PNG "Omega")
+    - Selection probability 1/Omega
+    ![Probability](probability.PNG "Probability")
+
+- G(n p) vs G(n m)
+    - Both models act similar when n is large
+    - G(n p) is more likely to contain none or all possible edges
+    - G(n m) has fixed number of edges
+
+![P](p_values.PNG "P Values")
+
+- Small p
+    - Small isolated comonents
+    - Small diameter
+- Large p
+    - Giant component appears
+    - isolated components become connected
+    - diameter increases
+- Very large p
+    - Diameter shrinks
+    - Point of shrinkage is *phase transition*
+    - Happens at p=1/(n-1) 0r c=1
+-Local and Global clustering coefficients are **p**
+
+![Random Graphs](randomgraphs.PNG "Random Graphs")
+
+- Is able to model average path lengths
+- Underestimates clustering coefficients
+
+- Random graph vs. scale frree netoworks
+    - Differ in the tail of the degree distribution
+        - Small k: Power law is above Poisson function
+        - Moderate k: Poisson distribution is above power law
+        - Large k: Power law is above Poisson function
+    - Disruption: Random % of nodes removed
+        - Monotonic increase in diameter of random graphs
+        - Diameter remains almost same in scale-free graphs
+    - Attack: % of nodes are removed intentionally 
+        - Diameter does not change in random graphs
+        - In scale free graphs diamter doubles for every 5% node removal
 
 
+## Lesson 7: Preferential Attachment Model
 
+- When adding a new node, it is more likely to connect to an existing node with  more number of edges
+-Probability of connecting to a node is proportional to its degree
+- **Two Ingredients**
+    - _Growth Element_: Add nodes as time goes by
+    - _Preferential Attachment Model_: Edges are added in a specific way to achieve scale free networks
+![Preferential Graphs](preferntialgraphs.PNG "Preferential Graphs")
+- Realistic degree distribution
+- Small Average Path lengths
+- **FAILS** to exhibit high clustering coefficients
 
+## Lesson 8: Small World Model
 
-
+- In real world people have similar fixed connections (parents, students, siblings)
+- Embedding individuals in regular networks
+- Builds the network on low dimensional regular lattice
+- Example: one dimensional ring lattice
